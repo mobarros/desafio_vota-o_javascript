@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+    <style>
+        body{
+            text-align: center
+        }
+
+      </style>
+    
+  </head>
+
+<body style="background-color: white;">
+      <h1></h1>
+
+    <button onclick="mudarCor()">Mudar cor de fundo</button>
+
+<script>
+   let voto = parseInt(prompt("Vote no seu candidato/ 1: Julia, 2: Camila, 3: Mariana, 4: Leticia, 0: Nulo"))
+    
+   let h1_seuVoto = document.querySelector("h1");
+
+   
+  switch (voto) {
+    case 1:
+     h1_seuVoto.textContent = "Votou na candidata Julia"
+     break;
+    case 2:
+     h1_seuVoto.textContent = "Votou na candidata Camila"
+     break;
+    case 3:
+     h1_seuVoto.textContent = "Votou na candidata Mariana"
+     break;
+    case 4:
+     h1_seuVoto.textContent = "Votou na candidata Leticia"
+     break;
+    case 0:
+     h1_seuVoto.textContent = "Votou na Nulo ou Branco"
+     break;
+    default:
+     h1_seuVoto.textContent = "Voto Inexistente" 
+}
+
+function mudarCor() {
+    let body = document.querySelector("body");
+    let colorSelect = document.querySelector("#colorSelect");
+    body.style.backgroundColor = colorSelect.value;
+}
+
+function mudarCor() {
+            let body = document.querySelector("body");
+            let btn_mudarCor = document.querySelector("button");
+
+            if (body.style.backgroundColor == "white") {
+                body.style.backgroundColor = "violet";
+                btn_mudarCor.textContent = "Desfazer";
+            } else {
+                body.style.backgroundColor = "white";
+                btn_mudarCor.textContent = "Mudar cor de fundo";
+            }
+        }
+
+</script>
+    
+</body>
+</html>
